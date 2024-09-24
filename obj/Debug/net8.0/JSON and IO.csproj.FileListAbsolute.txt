@@ -1,0 +1,14 @@
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\bin\Debug\net8.0\JSON and IO.exe
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\bin\Debug\net8.0\JSON and IO.deps.json
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\bin\Debug\net8.0\JSON and IO.runtimeconfig.json
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\bin\Debug\net8.0\JSON and IO.dll
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\bin\Debug\net8.0\JSON and IO.pdb
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.AssemblyInfoInputs.cache
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.AssemblyInfo.cs
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.csproj.CoreCompileInputs.cache
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.dll
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\refint\JSON and IO.dll
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.pdb
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.genruntimeconfig.cache
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\ref\JSON and IO.dll
