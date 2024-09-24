@@ -41,10 +41,13 @@ class Program
             string responseBody = await response.Content.ReadAsStringAsync();
             // Above three lines can be replaced with simplified line:
             // string responseBody = await client.GetStringAsync(uri);
-
+            
             Console.WriteLine("Response from cat-fact.herokuapp.com:");
+            string catFact = serializer.GetBetween(responseBody, "text",",");
+            string[] catFacts = {catFact};
+            serializer.WriteToFile(catFacts,"catfact.txt");
             serializer.WriteToJSON("test3.JSON",responseBody);
-            Console.WriteLine(responseBody);
+            Console.WriteLine(catFact);
         }
         catch (HttpRequestException e)
         {
@@ -58,7 +61,7 @@ class Program
 interface ISerializer
 {
     string[] ReadFile(string path);
-    string[] ReadFromJSON(string path);
+    string?[] ReadFromJSON(string path);
     string WriteToJSON(string path, string line1, string line2, string line3);
     void WriteToJSON(string path, string text);
     void WriteToFile(string[] textToWrite, string path);
@@ -67,6 +70,8 @@ interface ISerializer
     string[] CreateFile(string name, string path);
     //Unused and empty
     string[] DeleteFile(string path);
+
+    string GetBetween(string strSource, string strStart, string strEnd);
 }
 
 public class Serializer: ISerializer{
@@ -99,7 +104,7 @@ public class Serializer: ISerializer{
         return test.ToArray();
     }
 
-    public string[] ReadFromJSON(string path){
+    public string?[] ReadFromJSON(string path){
         using (StreamReader r = new StreamReader("test.JSON"))  
         {  
             string json = r.ReadToEnd();  
@@ -107,7 +112,8 @@ public class Serializer: ISerializer{
             Console.WriteLine("Information read from JSON: " + info.line1);
             Console.WriteLine("Information read from JSON: " + info.line2);
             Console.WriteLine("Information read from JSON: " + info.line3);
-            string[] strings = {info.line1,info.line2,info.line3};
+            string?[] strings = {info.line1,info.line2,info.line3};
+            if(strings == null) throw new Exception();
             return strings.ToArray();
         }
     }
@@ -164,6 +170,18 @@ public class Serializer: ISerializer{
         return test;
     }
     
+    public string GetBetween(string strSource, string strStart, string strEnd)
+    {
+        if (strSource.Contains(strStart) && strSource.Contains(strEnd))
+        {
+            int Start, End;
+            Start = strSource.IndexOf(strStart, 0) + strStart.Length;
+            End = strSource.IndexOf(strEnd, Start);
+            return strSource.Substring(Start, End - Start);
+        }
+
+        return "";
+    }
 }
 
 
