@@ -12,7 +12,7 @@ class Program
         //Set up a new Serializer class
         Serializer serializer = new();
         //Set the path of the testfile, which should be an empty .txt file
-        string path = "C:/Users/marti/OneDrive/Skrivebord/Kode Test/JSON and IO/Testfile-IO.txt";
+        string path = @".\Testfile-IO.txt";
         //Set up an array with test-messages
         String[] testArray = {"Hey! Do you think this will work?", 
         "We will see. It might!", 

@@ -12,3 +12,4 @@ C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\refint
 C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.pdb
 C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.genruntimeconfig.cache
 C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\ref\JSON and IO.dll
+C:\Users\marti\OneDrive\Skrivebord\Kode Test\JSON and IO\obj\Debug\net8.0\JSON and IO.sourcelink.json
