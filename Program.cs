@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 namespace JSON_and_IO;
@@ -41,13 +42,17 @@ class Program
             string responseBody = await response.Content.ReadAsStringAsync();
             // Above three lines can be replaced with simplified line:
             // string responseBody = await client.GetStringAsync(uri);
+
+            Catfact? catfact = await client.GetFromJsonAsync<Catfact>("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1");
             
             Console.WriteLine("Response from cat-fact.herokuapp.com:");
-            string catFact = serializer.GetBetween(responseBody, "text",",");
-            string[] catFacts = {catFact};
-            serializer.WriteToFile(catFacts,"catfact.txt");
-            serializer.WriteToJSON("test3.JSON",responseBody);
-            Console.WriteLine(catFact);
+            if(catfact != null){
+                string[] catfacts = {catfact.Text};
+                serializer.WriteToFile(catfacts,"catfact.txt");
+                serializer.WriteToJSON("test3.JSON",responseBody);
+                Console.WriteLine(catfact.Text);
+            }
+            
         }
         catch (HttpRequestException e)
         {
@@ -56,6 +61,11 @@ class Program
         }
     }
 
+}
+
+public class Catfact()
+{
+    public string? Text {get; set;}
 }
 
 interface ISerializer
